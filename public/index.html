@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class='use-all-space'>
+
+<head>
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge' />
+    <meta charset='UTF-8'>
+    <title>My Map</title>
+
+    <!----------------------------------------------->
+    <!--  Meta tag for rendering on mobile devices -->
+    <!----------------------------------------------->
+    <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <!----------------------------------------------->
+    <!-- CSS: Bootstrap, Firebase, other API -->
+    <!----------------------------------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+    <!------------------------>
+    <!-- Your own CSS files -->
+    <!------------------------>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Replace version in the URL with desired library version -->
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/2.0.0/SearchBox-web.js"></script>
+    <link rel='stylesheet' type='text/css'
+        href='https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/2.0.0/SearchBox.css'>
+    <!-- Include SDK's stylesheet -->
+    <link rel='stylesheet' type='text/css'
+        href='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.48.1/maps/maps.css' />
+    <!-- Include JavaScript SDK -->
+    <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.48.1/maps/maps-web.min.js'></script>
+    <style>
+        body {
+            background-color: #aef19c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loaderContainer">
+        <h1>Welcome to LitterBugs</h1>
+        <img id="loadingLogo" src="images/litterbugslogo.svg" />
+    </div>
+
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, other API's    -->
+    <!----------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        
+    <script>
+
+        // Fades in litterbugs logo and index.html text and calls animation to remove.
+        window.addEventListener("load", function () {
+            $(".loaderContainer").hide().fadeIn("slow");
+            setTimeout(loader, 1500);
+            
+        });
+
+        // Slides logo and text off screen and calls login redirect
+        function loader() {
+            $(".loaderContainer").animate({left:"100vw"});
+            setTimeout(loginRedirect, 500);
+        }
+
+        // Switches index.html to login.html
+        function loginRedirect() {
+            window.location.assign("login.html");
+        }
+    </script>
+</body>
+
+</html>

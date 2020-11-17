@@ -1,0 +1,136 @@
+#html {
+    background-color: white;
+}
+
+#loadingLogo {
+    display: inline-block;
+    width: 30vw;
+    height: 30vh;
+}
+
+.loaderContainer {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    background-color: #aef19c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1031;
+}
+
+.litterbugs-nav {
+    background-color: rgba(107, 230, 36, 0.247) !important;
+    width: 100vw;
+}
+
+
+h1 {
+    color: white;
+}
+
+/* img {
+    width: 20%;
+    height: 100%;
+} */
+
+.row {
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    background-color: gray;
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+}
+
+.popup-details {
+    background-color: #629e3481;
+    margin: 0 -10px -10px -10px;
+}
+
+.mapboxgl-popup-content {
+    background-color: #7abd47 !important;
+}
+
+.garbageBin,
+.recycleBin,
+.blankBin {
+    width: 50px;
+    height: 50px;
+}
+
+.preferences-header {
+    background-color:#9edb6f;
+    border:none;
+}
+
+.iconOptions {
+    width: 80%;
+    padding: 1rem 0;
+}
+
+.iconpack-container {
+    border: 1px solid #7abd47;
+    background-color:  rgba(107, 230, 36, 0.247);
+    border-radius: 10px;
+    width: 80%;
+}
+
+.iconpack-container:hover {
+    border: 1px dashed #426428;
+}
+
+.iconpack-selected {
+    border: 1px solid #426428;
+    background-color:  rgba(9, 24, 0, 0.726);
+}
+
+.modal-content {
+    background-color: #c4f0a2;
+    border-color: #c4f0a2;
+}
+
+.modal-header {
+    border-color: gray;
+}
+
+
+.dropdown-menu {
+    background-color: rgba(3, 3, 3, 0);
+    border-color: rgba(3, 3, 3, 0);
+}
+
+.requestBinModal {
+    /* background-color: rgba(3,3,3,0); */
+    border-color: rgba(3, 3, 3, 0);
+}
+
+.requestBinContainer {
+    text-align: center;
+}
+
+#markerSelect,
+#currentLocSelect {
+    opacity: 30%;
+}
+
+#logoutIcon {
+    display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    #logoutIcon {
+        display: block;
+    }
+
+    #logoutText {
+        display: none;
+    }
+}
